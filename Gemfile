@@ -8,7 +8,6 @@ group :assets do
 end
 gem 'thin'
 gem 'haml-rails'
-gem 'simple_form'
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
