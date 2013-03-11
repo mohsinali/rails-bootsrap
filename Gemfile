@@ -8,6 +8,7 @@ group :assets do
 end
 gem 'thin'
 gem 'haml-rails'
+gem 'ruby-debug19'
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'

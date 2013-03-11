@@ -1,0 +1,6 @@
+= simple_form_for @role do |f|
+  - if @role.errors.any?
+    - @role.errors
+  = f.input :name, :required => true
+  = f.submit :value => @role.new_record? ? "Add" : "Update", :class => "btn btn-primary"
+  = link_to "Cancel", roles_path, :class => "btn btn-danger"
