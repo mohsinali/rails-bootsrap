@@ -1,0 +1,11 @@
+%h2= "Roles"
+- if @roles.size > 0
+  %table{:class => "table table-condensed"}
+    - @roles.each do |role|
+      %tr
+        %td= role.name.titleize
+        %td
+          = link_to "Delete", role_path(role), :data => {:confirm => "Are you sure?"}, :method => :delete, :class => "btn btn-mini btn-danger"
+          = link_to "Edit", edit_role_path(role.id), :class => "btn btn-mini"
+
+= link_to "Add new Role", new_role_path, :class => "btn btn-primary"

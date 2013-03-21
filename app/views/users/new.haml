@@ -1,3 +1,11 @@
 %h2= "Add new User"
-- simple_form_for @user do |f|
- = f.input :name, :label => "Name"
+= simple_form_for @new_user do |f|
+  - if @new_user.errors.any?
+    %ul
+      - @new_user.errors.full_messages.each do |m|
+        %li= m
+  = f.input :name, :label => "Name", :required => true
+  = f.input :email, :required => true
+  = f.input :password, :required => true
+  = f.input :password_confirmation, :required => true
+  = f.submit :value => "Add", :class => "btn btn-primary"
