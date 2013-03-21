@@ -11,10 +11,14 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    @new_user = User.new
   end
   def create
-    
+    debugger
+    @user = User.new(params[:user])
+    if @user.save?
+      redirect_to users_path, :notice => "User updated."
+    end
   end
   
   def update
